@@ -99,14 +99,20 @@ int StringToInt(const char* _String)
 	int i = 0;
 	int value = 0;
 
-	while (0 != _String[i])
+	// _String[i]의 값이 존재한다면 (공백 문자가 아닌 동안에)
+	while (_String[i])
 	{
+		// 기존 값을 10배한다.
 		value *= 10;
+		// 해당 문자의 값에서 48을 빼면 숫자의 값이 나온다. 그 값을 받는다.
 		int j = _String[i] - 48;
+		// 기존 값과 더해준다.
 		value += j;
+		// 다음 문자를 확인하기 위해 i를 더한다.
 		++i;
 	}
 
+	// 값을 반환한다.
 	return value;
 }
 
