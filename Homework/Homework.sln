@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_AR47Start", "001_AR47Start\001_AR47Start.vcxproj", "{CAD4160B-3DCA-4F86-A9BA-F33BDF97ABAD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework0317", "Homework0317\Homework0317.vcxproj", "{8C615E12-B020-4FE9-A980-7699756B456A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework", "Homework", "{0809BF89-D145-4B95-9BE1-036FE0D204DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,9 +25,20 @@ Global
 		{CAD4160B-3DCA-4F86-A9BA-F33BDF97ABAD}.Release|x64.Build.0 = Release|x64
 		{CAD4160B-3DCA-4F86-A9BA-F33BDF97ABAD}.Release|x86.ActiveCfg = Release|Win32
 		{CAD4160B-3DCA-4F86-A9BA-F33BDF97ABAD}.Release|x86.Build.0 = Release|Win32
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Debug|x64.ActiveCfg = Debug|x64
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Debug|x64.Build.0 = Debug|x64
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Debug|x86.ActiveCfg = Debug|Win32
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Debug|x86.Build.0 = Debug|Win32
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Release|x64.ActiveCfg = Release|x64
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Release|x64.Build.0 = Release|x64
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Release|x86.ActiveCfg = Release|Win32
+		{8C615E12-B020-4FE9-A980-7699756B456A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C615E12-B020-4FE9-A980-7699756B456A} = {0809BF89-D145-4B95-9BE1-036FE0D204DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {622527E4-1DB6-4F5F-8BE2-EDC55B2E9806}
