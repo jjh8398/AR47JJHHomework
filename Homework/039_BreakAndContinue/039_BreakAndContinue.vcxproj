@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d395ec60-272d-481f-af24-19ac0639cee1}</ProjectGuid>
-    <RootNamespace>My001AR47Start</RootNamespace>
+    <ProjectGuid>{3545d991-d8b5-4ca3-82f7-97f6f3836580}</ProjectGuid>
+    <RootNamespace>My039BreakAndContinue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="001_AR47Start.cpp" />
+    <ClCompile Include="039_BreakAndContinue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
