@@ -18,10 +18,18 @@ void Damage(
     int& _Hp // 맞는 쪽의 체력
 )
 {
+    _Hp -= _Att;
+}
+
+void PrintDamage(
+    const char* const _AttName, // 때리는 족의 이름
+    const char* const _DefName, // 맞는 쪽의 이름
+    const int& _Att,  // 때리는 쪽의 공격력
+    int& _Hp // 맞는 쪽의 체력
+)
+{
     printf_s("%s가 공격을 시작합니다\n", _AttName);
     printf_s("%s가 %d의 데미지를 입었습니다.\n", _DefName, _Att);
-    _Hp -= _Att;
-
 }
 
 void StatusRender(
@@ -62,7 +70,11 @@ int main()
         StatusRender("Monster", MonsterAtt, MonsterHp);
         _getch();
 
+        system("cls");
         Damage("Player", "Monster", PlayerAtt, MonsterHp);
+        StatusRender("Player", PlayerAtt, PlayerHp);
+        StatusRender("Monster", MonsterAtt, MonsterHp);
+        PrintDamage("Player", "Monster", PlayerAtt, MonsterHp);
         _getch();
 
         if (0 >= MonsterHp)
@@ -73,7 +85,12 @@ int main()
             break;
         }
 
+        system("cls");
         Damage("Monster", "Player", MonsterAtt, PlayerHp);
+        StatusRender("Player", PlayerAtt, PlayerHp);
+        StatusRender("Monster", MonsterAtt, MonsterHp);
+        PrintDamage("Player", "Monster", PlayerAtt, MonsterHp);
+        PrintDamage("Player", "Monster", MonsterAtt, PlayerHp);
         _getch();
 
         if (0 >= PlayerHp)
