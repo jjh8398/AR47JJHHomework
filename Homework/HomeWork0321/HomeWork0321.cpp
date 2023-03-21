@@ -12,8 +12,6 @@
 // 특정대상이 다른 대상을 때린다.
 // 데이터를 변화시켜서 목적을 이룬다.
 void Damage(
-    const char* const _AttName, // 때리는 족의 이름
-    const char* const _DefName, // 맞는 쪽의 이름
     const int& _Att,  // 때리는 쪽의 공격력
     int& _Hp // 맞는 쪽의 체력
 )
@@ -71,7 +69,7 @@ int main()
         _getch();
 
         system("cls");
-        Damage("Player", "Monster", PlayerAtt, MonsterHp);
+        Damage(PlayerAtt, MonsterHp);
         StatusRender("Player", PlayerAtt, PlayerHp);
         StatusRender("Monster", MonsterAtt, MonsterHp);
         PrintDamage("Player", "Monster", PlayerAtt, MonsterHp);
@@ -86,7 +84,7 @@ int main()
         }
 
         system("cls");
-        Damage("Monster", "Player", MonsterAtt, PlayerHp);
+        Damage(MonsterAtt, PlayerHp);
         StatusRender("Player", PlayerAtt, PlayerHp);
         StatusRender("Monster", MonsterAtt, MonsterHp);
         PrintDamage("Player", "Monster", PlayerAtt, MonsterHp);

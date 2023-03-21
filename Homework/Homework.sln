@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_AR47Start", "001_AR47Start\001_AR47Start.vcxproj", "{D395EC60-272D-481F-AF24-19AC0639CEE1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework0317", "Homework0317\Homework0317.vcxproj", "{8C615E12-B020-4FE9-A980-7699756B456A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork0317", "Homework0317\Homework0317.vcxproj", "{8C615E12-B020-4FE9-A980-7699756B456A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework", "Homework", "{0809BF89-D145-4B95-9BE1-036FE0D204DA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{0809BF89-D145-4B95-9BE1-036FE0D204DA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "002_Compaile", "002_Compaile\002_Compaile.vcxproj", "{80AC010F-A695-4256-ADE1-1DAD3F790D29}"
 EndProject
@@ -92,6 +92,14 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "016_ArrayToString", "16_ArrayToString\16_ArrayToString.vcxproj", "{96D9EA99-1AFD-4B53-AE09-99318EBC7C2D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "042_Class003_Struct", "041_Class003_Struct\041_Class003_Struct.vcxproj", "{B72C2AE6-DC17-4154-A9DF-92DA2284C96A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{1AEE6B97-8FE4-45EB-9D02-C98EB778CF57}"
+	ProjectSection(SolutionItems) = preProject
+		객체지향.txt = 객체지향.txt
+		단축키.txt = 단축키.txt
+		메모리영역.txt = 메모리영역.txt
+		용어설명.txt = 용어설명.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
