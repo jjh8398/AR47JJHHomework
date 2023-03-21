@@ -90,7 +90,7 @@ int main()
         StatusRender("Player", PlayerAtt, PlayerHp);
         StatusRender("Monster", MonsterAtt, MonsterHp);
         PrintDamage("Player", "Monster", PlayerAtt, MonsterHp);
-        PrintDamage("Player", "Monster", MonsterAtt, PlayerHp);
+        PrintDamage("Monster", "Player", MonsterAtt, PlayerHp);
         _getch();
 
         if (0 >= PlayerHp)
