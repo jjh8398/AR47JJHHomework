@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b72c2ae6-dc17-4154-a9df-92da2284c96a}</ProjectGuid>
-    <RootNamespace>My041Class003Struct</RootNamespace>
+    <ProjectGuid>{141f45a0-d69a-46d0-b978-a7e6e9b77887}</ProjectGuid>
+    <RootNamespace>RandomHomeWork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>042_Class003_Struct</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="041_Class003_Struct.cpp" />
+    <ClCompile Include="RandomHomeWork.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
