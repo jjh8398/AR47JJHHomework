@@ -23,9 +23,35 @@ public:
     // 8바이트
 };
 
+class ServerLinkZoneAndProxyManager
+{
+public:
+    int LinkCount;
+};
+
 int main()
 {
+    ServerLinkZoneAndProxyManager NewTest;
+    NewTest.ServerLinkZoneAndProxyManager::LinkCount;
+
+    // 500번지의 플레이어를 대표하는 NewPlayer
     Player NewPlayer;
+
+    // NewPlayer.Player::Hp;
+
+    // 99%의 경우 FullName을 사용하지 않고
+    NewPlayer./*Player::*/Hp;
+    // NewPlayer.Player::Hp;
+
+    // 일반적으로 맴버변수일경우에는 아무런 의미도 없어요.
+    // Player::Hp;
+
+
+    // 일반적인 맴버변수를 :: 통해서 사용할수 없다.
+    // Player::Hp;
+    // NewPlayer.Hp;
+
+    int* Ptr = &NewPlayer.Hp;
 
     int* Ptr0 = &NewPlayer.Hp;
     short* Ptr1 = &NewPlayer.Value3;
@@ -33,11 +59,11 @@ int main()
     short* Ptr3 = &NewPlayer.Value9;
     char* Ptr4 = &NewPlayer.TTT;
 
-    int a = int(Ptr0);
-    int b = int(Ptr1);
-    int c = int(Ptr2);
-    int d = int(Ptr3);
-    int e = int(Ptr4);
+    // int a = int(Ptr0);
+    // int b = int(Ptr1);
+    // int c = int(Ptr2);
+    // int d = int(Ptr3);
+    // int e = int(Ptr4);
 
     int Size = sizeof(Player);
 
