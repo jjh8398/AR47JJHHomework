@@ -34,15 +34,26 @@
 //     @
 //     @
 
+const int ScreenYSize = 10;
+const int ScreenXSize = 20;
+
+char Arr[ScreenYSize][ScreenXSize] = { 0, };
+
+void PrintScreen()
+{
+	system("cls");
+	for (size_t y = 0; y < ScreenYSize; y++)
+	{
+		for (size_t x = 0; x < ScreenXSize; x++)
+		{
+			printf_s("%c", Arr[y][x]);
+		}
+		printf_s("\n");
+	}
+}
+
 int main()
 {
-	const int ScreenYSize = 10;
-	const int ScreenXSize = 20;
-
-	char Arr[ScreenYSize][ScreenXSize] = { 0, };
-
-
-
 	// 정수를 정수로 나오면 실수는 버리고 정수의 값만 나옵니다.
 	int PlayerY = ScreenYSize / 2;
 	int PlayerX = ScreenXSize / 2;
@@ -75,14 +86,7 @@ int main()
 		//int ObstacleLocation1 = ObstacleY1 * ScreenYSize + ObstacleX1 * ScreenXSize;
 
 
-		for (size_t y = 0; y < ScreenYSize; y++)
-		{
-			for (size_t x = 0; x < ScreenXSize; x++)
-			{
-				printf_s("%c", Arr[y][x]);
-			}
-			printf_s("\n");
-		}
+		PrintScreen();
 		
 
 		// 이건 내가 키를 눌렀다면 1
@@ -159,15 +163,7 @@ int main()
 
 			while (BombYDec > 0 || BombYInc < ScreenYSize - 1 || 0 < BombXDec || BombXInc < ScreenXSize - 1)
 			{
-				system("cls");
-				for (size_t y = 0; y < ScreenYSize; y++)
-				{
-					for (size_t x = 0; x < ScreenXSize; x++)
-					{
-						printf_s("%c", Arr[y][x]);
-					}
-					printf_s("\n");
-				}
+
 
 				if(0 < BombYDec)
 					--BombYDec;
@@ -183,19 +179,14 @@ int main()
 				Arr[BombY][BombXDec] = '@';
 				Arr[BombY][BombXInc] = '@';
 
+				PrintScreen();
+
 				Sleep(200);
 			}
 
 			{							
-				system("cls");
-				for (size_t y = 0; y < ScreenYSize; y++)
-				{
-					for (size_t x = 0; x < ScreenXSize; x++)
-					{
-						printf_s("%c", Arr[y][x]);
-					}
-					printf_s("\n");
-				}
+				PrintScreen();
+
 				Sleep(200);
 			}
 
