@@ -1,15 +1,8 @@
 #include "Bullet.h"
 #include "Player.h"
 
-Player NewPlayer;
-
 Bullet::Bullet()
 {
-}
-
-void Bullet::ResetPos()
-{
-	Pos = NewPlayer.GetPos();
 }
 
 void Bullet::MovePos()

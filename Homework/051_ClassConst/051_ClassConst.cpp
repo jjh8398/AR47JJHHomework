@@ -6,6 +6,15 @@
 class Player 
 {
 public:
+    static void GlobalFunction() /*const*/// const로 만들 this가 존재하지 않으므로 붙이지 못한다.
+    {
+        // 객체가 필요없이 호출할수 있기 때문에
+        // == this가 존재하지 않는 함수가 됩니다.
+        // this가 존재하지 않으므로 함수 뒤에 const를 붙일수가 없게됩니다.
+        // const로 만들 this가 없다
+        // this;
+    }
+
     void SetHp(int _Value)
     {
         Hp = _Value;
@@ -28,9 +37,9 @@ public:
 
         printf_s("플레이어의 능력치 ------------------------\n");
 
-        printf_s("공격력 : %d\n", Att);
+        printf_s("공격력 : %d\n", this->Att);
 
-        printf_s("체  력 : %d\n", Hp);
+        printf_s("체  력 : %d\n", this->Hp);
 
         printf_s("----------------------------------------\n");
     }
@@ -45,9 +54,13 @@ private:
 
 int main()
 {
+    Player::GlobalFunction();
+
     Player NewPlayer = Player();
 
-    NewPlayer.PrintStatus();
+    // 일반적인 맴버함수는 객체를 필요로하고
+    // 그 객체가 this가 되어주는것이다.
+    NewPlayer.PrintStatus(/*&NewPlayer*/);
     NewPlayer.PrintStatus();
     NewPlayer.PrintStatus();
     NewPlayer.PrintStatus();

@@ -13,8 +13,6 @@ public:
 		return ABullet;
 	}
 
-	void ResetPos();
-
 	void MovePos();
 
 	void SetPos(int2 _pos);
