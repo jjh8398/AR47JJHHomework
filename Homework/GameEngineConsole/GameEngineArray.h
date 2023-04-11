@@ -2,16 +2,20 @@
 #include <GameEngineBase/GameEngineDebug.h>
 // #include <Program Files/Adobe/Adobe Creative Cloud Experience/>
 
-typedef int DataType;
+// typedef int DataType;
 
-// 설명 :
+template<typename DataType>
 class GameEngineArray
 {
 public:
 	// delete Function
-	GameEngineArray(const GameEngineArray& _Other) = delete;
+	// GameEngineArray(const GameEngineArray& _Other) = delete;
 	GameEngineArray(GameEngineArray&& _Other) noexcept = delete;
 	GameEngineArray& operator=(GameEngineArray&& _Other) noexcept = delete;
+
+	GameEngineArray()
+	{
+	}
 
 
 	// constrcuter destructer
@@ -62,7 +66,7 @@ public:
 		return ArrPtr[_Index];
 	}
 
-	void ReSize(int _Value) 
+	void ReSize(size_t _Value) 
 	{
 		// 20줄 안팍.
 		// 삼항 연산자 써보시면 좋을겁니다.
@@ -73,7 +77,7 @@ public:
 		// 기존의 있던 값에서 현재의 배열이 복사한다음 삭제해야 한다.
 
 		DataType* NewPtr = new DataType[_Value];
-		int CopySize = _Value < ArrCount ? _Value : ArrCount;
+		size_t CopySize = _Value < ArrCount ? _Value : ArrCount;
 
 		for (size_t i = 0; i < CopySize; i++)
 		{
@@ -93,7 +97,7 @@ public:
 protected:
 
 private:
-	size_t ArrCount;
+	size_t ArrCount = 0;
 	DataType* ArrPtr = nullptr;
 
 };
