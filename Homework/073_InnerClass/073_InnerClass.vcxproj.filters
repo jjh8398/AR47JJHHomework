@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="32_Switch.cpp">
+    <ClCompile Include="073_InnerClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

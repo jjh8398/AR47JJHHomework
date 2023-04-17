@@ -15,6 +15,7 @@
 
 // 어떤 클래스가 자신내부에 자기자신의 
 // 참조형(보통은 포인터)을 n개 들고 있으면
+// 이터레이터구조라고 합니다.
 // 그걸 노드형식이라고 합니다.
 
 
@@ -23,6 +24,41 @@
 // 청의성당
 // 하이데의 큰 불탑   
 // 매듀라
+
+// Skill 
+// {
+//    Skill*
+//    virtual void SkillEffect() 
+//    {
+//    }
+// }
+
+
+// 아래베기 : public Skill
+// {
+//    virtual void SkillEffect() 
+//    {
+//    }
+// {
+
+// Skill* Skill1;
+// Skill* Skill2;
+// Skill* Skill3;
+// Skill* Skill4;
+// Skill* Skill5;
+// Skill* Skill6;
+// Skill* Skill7;
+// Skill* Skill8;
+// Skill* Skill9;
+
+// *
+// **
+// ***
+// ****
+// *****
+
+// GameEngineArray<Skill*>
+
 
 class MapZone
 {
@@ -126,6 +162,12 @@ private:
 
     DataType Value;
 };
+
+// 이 배열을 좀더 효율적으로 관리하기 위한 클래스
+// 이 node를 좀더 효율적으로 관리하기 위한 클래스
+// 언어에서 지원해줍니다.
+// 신뢰성이 있는 배열과 이 노드를 관리해주는 클래스를 만들었습니다.
+// std
 
 int main()
 {

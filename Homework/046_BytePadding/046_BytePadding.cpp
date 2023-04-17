@@ -10,9 +10,6 @@ class Player
 public:
     int Hp;          // 4
     short Value3;    // 4
-    __int64 Value4;      // 4
-    short Value9;    // 4
-    char TTT;
 
     // 8바이트 이하 가장큰 바이트의 자료형을 찾아요.
     // 4바이트
@@ -23,7 +20,7 @@ public:
     // 8바이트
 };
 
-class ServerLinkZoneAndProxyManager
+class ServerLinkZoneAndProxyManager 
 {
 public:
     int LinkCount;
@@ -52,18 +49,6 @@ int main()
     // NewPlayer.Hp;
 
     int* Ptr = &NewPlayer.Hp;
-
-    int* Ptr0 = &NewPlayer.Hp;
-    short* Ptr1 = &NewPlayer.Value3;
-    __int64* Ptr2 = &NewPlayer.Value4;
-    short* Ptr3 = &NewPlayer.Value9;
-    char* Ptr4 = &NewPlayer.TTT;
-
-    // int a = int(Ptr0);
-    // int b = int(Ptr1);
-    // int c = int(Ptr2);
-    // int d = int(Ptr3);
-    // int e = int(Ptr4);
 
     int Size = sizeof(Player);
 

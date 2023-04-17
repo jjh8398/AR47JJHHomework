@@ -2,10 +2,10 @@
 #include <conio.h>
 #include <Windows.h>
 #include <GameEngineConsole/ConsoleGameScreen.h>
-#include "ConsoleObjectManager.h"
+#include <GameEngineConsole/ConsoleObjectManager.h>
 #include "Bomb.h"
+#include "Item.h"
 #include "GameEnum.h"
-#include "ConsoleObjectManager.h"
 
 bool Player::IsGameUpdate = true;
 
@@ -18,25 +18,46 @@ Player::Player()
 
 bool Player::IsBomb(int2 _NextPos)
 {
-	// 폭탄이 설치되었다면 못통과하게 만들어놓으세요.
-	GameEngineArray<ConsoleGameObject*>& BombGroup
+	std::list<ConsoleGameObject*>& BombGroup
 		= ConsoleObjectManager::GetGroup(ObjectOrder::Bomb);
 
-	bool ReturnValue = false;
-
-	for (size_t i = 0; i < BombGroup.Count(); i++)
+	// Ranged for 라는 문법이에요
+	
+	// 절대절대절대. 내부에서 구조나 개수가 바뀌는 행동을 하면 안되요.
+	// push_back
+	// push_front
+	// erase
+	for (ConsoleGameObject* Ptr : BombGroup)
 	{
-		if (BombGroup[i] == nullptr)
-			continue;
-
-		if (_NextPos == BombGroup[i]->GetPos())
+		// 터질때가 있습니다.
+		if (nullptr == Ptr)
 		{
-			ReturnValue = true;
+			continue;
+		}
+
+		int2 BombPos = Ptr->GetPos();
+		if (_NextPos == BombPos)
+		{
+			return true;
 		}
 	}
 
-	return ReturnValue;
+	return false;
 }
+
+void Player::ItemCheck(int2 _NextPos)
+{
+	Item Item;
+	if (Item.GetPos() == _NextPos)
+	{
+		// 아이템을 새로운 위치에 다시 만든다.
+		Item.ReCreate();
+		// 폭탄의 위력 1 증가
+		++BombPower;
+	}
+}
+
+
 
 // 화면바깥으로 못나가게 하세요. 
 void Player::Update()
@@ -57,10 +78,9 @@ void Player::Update()
 	case 'A':
 		NextPos = Pos;
 		NextPos.X -= 1;
-		if (true == IsBomb(NextPos))
-			break;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos) && false == IsBomb(NextPos))
 		{
+			ItemCheck(NextPos);
 			Pos.X -= 1;
 		}
 		break;
@@ -68,10 +88,9 @@ void Player::Update()
 	case 'D':
 		NextPos = Pos;
 		NextPos.X += 1;
-		if (true == IsBomb(NextPos))
-			break;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos) && false == IsBomb(NextPos))
 		{
+			ItemCheck(NextPos);
 			Pos.X += 1;
 		}
 		break;
@@ -79,10 +98,9 @@ void Player::Update()
 	case 'W':
 		NextPos = Pos;
 		NextPos.Y -= 1;
-		if (true == IsBomb(NextPos))
-			break;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos) && false == IsBomb(NextPos))
 		{
+			ItemCheck(NextPos);
 			Pos.Y -= 1;
 		}
 		break;
@@ -90,23 +108,18 @@ void Player::Update()
 	case 'S':
 		NextPos = Pos;
 		NextPos.Y += 1;
-		if (true == IsBomb(NextPos))
-			break;
-		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos))
+		if (false == ConsoleGameScreen::GetMainScreen().IsScreenOver(NextPos) && false == IsBomb(NextPos))
 		{
+			ItemCheck(NextPos);
 			Pos.Y += 1;
 		}
 		break;
 	case 'f':
 	case 'F':
 	{
-		// 여기 이상황에서 보면
-		// ConsoleObjectManager 있고
-		// Player 
 		Bomb* NewBomb = ConsoleObjectManager::CreateConsoleObject<Bomb>(ObjectOrder::Bomb);
 		NewBomb->Init(BombPower);
 		NewBomb->SetPos(GetPos());
-		// 폭탄설치 
 		break;
 	}
 	case 'q':
