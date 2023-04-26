@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dd6d1289-4cb2-4b2a-8ebd-0904e1f56961}</ProjectGuid>
-    <RootNamespace>My47ClassDefault</RootNamespace>
+    <ProjectGuid>{68d949d7-de76-476f-ad5a-dba01515c0ae}</ProjectGuid>
+    <RootNamespace>My082LocalStaticValue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,25 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="47ClassDefault.cpp" />
-    <ClCompile Include="ADefaultClass.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="ADefaultClassaaaa.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ADefaultClass.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="ADefaultClassaaaa.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
+    <ClCompile Include="082_LocalStaticValue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,8 +3,10 @@
   <ItemGroup>
     <ClCompile Include="47ClassDefault.cpp" />
     <ClCompile Include="ADefaultClassaaaa.cpp" />
+    <ClCompile Include="ADefaultClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ADefaultClassaaaa.h" />
+    <ClInclude Include="ADefaultClass.h" />
   </ItemGroup>
 </Project>

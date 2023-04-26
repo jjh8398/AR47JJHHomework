@@ -23,4 +23,6 @@ int main()
     Address = (__int64)Ptr;
     Ptr = Ptr + 5;
     Address = (__int64)Ptr;
+
+    int a = 0;
 }

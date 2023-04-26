@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dd6d1289-4cb2-4b2a-8ebd-0904e1f56961}</ProjectGuid>
-    <RootNamespace>My47ClassDefault</RootNamespace>
+    <ProjectGuid>{11262ac0-ca3b-45a0-ba91-ed378a715dae}</ProjectGuid>
+    <RootNamespace>GameEngineMap</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,6 +70,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -127,25 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="47ClassDefault.cpp" />
-    <ClCompile Include="ADefaultClass.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="ADefaultClassaaaa.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
+    <ClCompile Include="GameEngineMap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ADefaultClass.h">
+    <ClInclude Include="GameEngineMap.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="ADefaultClassaaaa.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngineBase\GameEngineBase.vcxproj">
+      <Project>{43e95582-82fc-46c5-a7ca-7d887cd0432b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

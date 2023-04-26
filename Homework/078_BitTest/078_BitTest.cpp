@@ -25,4 +25,6 @@ int main()
     char Test3 = ChPtr[3];
 
     std::cout << "Hello World!\n";
+
+    return 20;
 }
